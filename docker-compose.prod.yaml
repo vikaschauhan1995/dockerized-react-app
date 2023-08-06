@@ -1,0 +1,9 @@
+services:
+  client:
+    image: containerized-notes-react-app-image
+    build:
+      context: .
+      dockerfile: ./Dockerfile.prod
+    container_name: notes-react-app-prod-container
+    ports:
+      - '8000:80'

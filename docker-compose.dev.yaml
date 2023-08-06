@@ -1,0 +1,11 @@
+services:
+  client:
+    image: notes-react-app-dev-image
+    build:
+      dockerfile: ./Dockerfile.dev
+    container_name: notes-react-app-dev-container
+    volumes:
+      - ./:/app
+      - ./node_modules:/app/node_modules/
+    ports:
+      - '3000:3000'
